@@ -40,7 +40,7 @@ const projects = [
 export default function Home() {
 
   const tl1 = useRef(gsap.timeline())
-  const clientsec = useRef(null)
+  // const clientsec = useRef(null)
 
   useGSAP(() => {
     // const isMobile = window.innerWidth <= 768; // You can adjust the breakpoint as needed
