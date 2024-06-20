@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from 'next/image';
-import LottieAnimation from '../LottieAnimation';
+// import LottieAnimation from '../LottieAnimation';
 import animationData from '../assets/activate.json'; // Adjust the path to your animation JSON file
 import passionanimation from '../assets/passion.json'; // Adjust the path to your animation JSON file
 import winkanimation from '../assets/wink.json'; // Adjust the path to your animation JSON file
@@ -12,6 +12,12 @@ import webanimation from '../assets/web-browser.json'; // Adjust the path to you
 import smartanimation from '../assets/smart.json'; // Adjust the path to your animation JSON file
 import dumbbellanimation from '../assets/dumbbell.json'; // Adjust the path to your animation JSON file
 gsap.registerPlugin(ScrollTrigger);
+import dynamic from 'next/dynamic'
+
+const LottieAnimation = dynamic(
+  () => import('../LottieAnimation'),
+  { ssr: false }
+)
 
 interface Props { }
 
