@@ -4,47 +4,95 @@
 
 @font-face {
   font-family: "roboto";
-  src: url("/Roboto-Regular.ttf") format("truetype");
-  /* url('/roboto-Regular.woff') format('woff'); */
+  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+  /* url('/fonts/roboto-Regular.woff') format('woff'); */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "roboto";
-  src: url("/Roboto-Bold.ttf") format("truetype");
+  src: url("/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "roboto";
-  src: url("/Roboto-Italic.ttf") format("truetype");
+  src: url("/fonts/Roboto-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "rubik";
-  src: url("/Rubik-Regular.ttf") format("truetype");
-  /* url('/Rubik-Regular.woff') format('woff'); */
+  src: url("/fonts/Rubik-Regular.ttf") format("truetype");
+  /* url('/fonts/Rubik-Regular.woff') format('woff'); */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "rubik";
-  src: url("/Rubik-Bold.ttf") format("truetype");
+  src: url("/fonts/Rubik-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "rubik";
-  src: url("/Rubik-Italic.ttf") format("truetype");
+  src: url("/fonts/Rubik-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "rubik";
-  src: url("/Rubik-BoldItalic.ttf") format("truetype");
+  src: url("/fonts/Rubik-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
+}
+@font-face {
+  font-family: "beng";
+  src: url("/fonts/BENGUIAB.TTF") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Josef";
+  src: url("/fonts/JosefinSlab-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Josef";
+  src: url("/fonts/JosefinSlab-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Josef";
+  src: url("/fonts/JosefinSlab-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Josef";
+  src: url("/fonts/JosefinSlab-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Josef";
+  src: url("/fonts/JosefinSlab-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Josef";
+  src: url("/fonts/JosefinSlab-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Josef";
+  src: url("/fonts/JosefinSlab-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }

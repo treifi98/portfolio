@@ -26,4 +26,4 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({
   );
 };
 
-export default LottieAnimation;
+export default React.memo(LottieAnimation);
