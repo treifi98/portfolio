@@ -63,7 +63,7 @@ function Header(props: Props) {
             <div className='w-[500px] aspect-[1.3/1] bg-[red]  absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] scale-[0] opacity-0 overflow-hidden z-[9999]' ref={hi} >
                 <img src="/rach.webp" alt="" className='w-full h-full object-cover object-center' />
             </div>
-           
+
         </>
     )
 }
