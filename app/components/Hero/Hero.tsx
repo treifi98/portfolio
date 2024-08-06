@@ -71,12 +71,12 @@ function Hero(props: Props) {
 
                 <Meme img='/karak.gif' top='top-[calc(100%-100px)]' left='left-[100px]' delay='delay-[0.25s]' display={hoveredDubai} />
                 <Meme img='/sky.gif' top='top-[calc(100%-100px)]' left='left-[calc(100%-100px)]' delay='delay-[0.35s]' display={hoveredDubai} />
-                {/* <div className='absolute bottom-[-50px] rotate-[10deg] left-[42%] translate-x-[-50%] vid1 z-[99999]'>
+                <div className='absolute bottom-[-50px] rotate-[10deg] left-[42%] translate-x-[-50%] vid1 z-[99999]'>
                     <Video vid='/vidlsc.mp4' />
                 </div>
                 <div className='absolute bottom-[-50px] rotate-[-10deg] left-[58%] translate-x-[-50%] vid2 z-[99999]'>
                     <Video vid='/vidlsc.mp4' />
-                </div> */}
+                </div>
             </div>
 
         </>
