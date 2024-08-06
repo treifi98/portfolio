@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState, useCallback, useRef } from 'react'
 import Button from './Button'
 import ProjDetails from './ProjDetails'
@@ -13,6 +14,22 @@ interface Project {
     desc?: string;
     logoWidth?: string;
     logoMt?: string;
+}
+
+interface ProjDetailsProps {
+    title: string;
+    logo: string;
+    tech: string;
+    desc: string;
+    logoWidth?: string;
+    logoMt?: string;
+}
+
+interface ButtonProps {
+    text: string;
+    bg: string;
+    textColr: string;
+    secondBg: string;
 }
 
 const projectData: Project[] = [
@@ -57,10 +74,6 @@ const Tv: React.FC = () => {
         setActiveProject(prev => prev > 1 ? prev - 1 : 6)
     }, [])
 
-    const setVideoRef = useCallback((el: HTMLVideoElement | null, index: number) => {
-        videoRefs.current[index] = el
-    }, [])
-
     return (
         <div className='relative h-max w-[45vw] mx-auto bg-[#fff] translate-x-[-15%] mt-[100px] shadow-md'>
             <div className='relative w-[45vw] aspect-[1.8/1] top-0 left-0'>
@@ -72,7 +85,9 @@ const Tv: React.FC = () => {
                                 loop
                                 muted
                                 disablePictureInPicture
-                                ref={(el) => setVideoRef(el, index)}
+                                ref={el => {
+                                    videoRefs.current[index] = el;
+                                }}
                                 preload="none"
                             >
                                 <source src={project.video} type="video/mp4" />
