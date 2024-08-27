@@ -178,7 +178,7 @@ export default function Home() {
 
           <ImageReveal  />
         </div> */}
-        <div className="mt-[250px] relative z-[99]">
+        <div className="mt-[100px] lap:mt-[250px] relative z-[99]">
 
           <Fun />
         </div>

@@ -40,6 +40,7 @@ const config: Config = {
       },
       screens: {
         xlap: "1400px",
+        amer: "1600px",
         lap: "1200px",
         tab: "1000px",
       },

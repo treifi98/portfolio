@@ -62,7 +62,7 @@ function Hero(props: Props) {
                 <div className='w-[100vw] h-full fixed z-[1] top-0 left-0'></div>
 
                 <div className=' relative h-[calc(100vh-150px)] tab:h-[calc(100vh-200px)] w-full flex justify-center items-center font-body z-[9] '>
-                    <div className='text-[40px] tab:text-[60px] w-[80%] lap:w-[40%] max-w-[786px] mx-auto text-center font-normal mt-[-100px]'>
+                    <div className='text-[40px] tab:text-[60px] w-[80%] amer:w-[40%] max-w-[786px] mx-auto text-center font-normal mt-[-100px]'>
                         <span className='font-headings font-normal text-secondary hword'>Hi</span>
                         <span className='hword'>
                             ,
@@ -134,17 +134,23 @@ function Hero(props: Props) {
                         </div>
                     </div>
                 </div>
-                <Meme img='/sem.webp' top='top-[calc(100%-100px)]' left='left-[calc(100%-100px)]' delay='delay-0' display={hoveredSe} />
-                <div className='mix-blend-difference'>
+                <div className='hidden tab:block'>
+
+                    <Meme img='/sem.webp' top='top-[calc(100%-100px)]' left='left-[calc(100%-100px)]' delay='delay-0' display={hoveredSe} />
+                </div>
+                <div className='mix-blend-difference hidden tab:block'>
 
                     <Meme img='/scroll-space.webp' top='top-[calc(100%-100px)]' left='left-[calc(100%-100px)]' delay='delay-0' display={hoveredSc} />
                 </div>
-                <div className='mix-blend-multiply'>
+                <div className='mix-blend-multiply hidden tab:block'>
 
-                <Meme img='/obada.png' top='top-[70%]' left='left-[calc(100%-250px)]' width='w-[700px]' height='h-[80%]' delay='delay-0' display={hoveredImg} />
+                    <Meme img='/obada.png' top='top-[70%]' left='left-[calc(100%-250px)]' width='w-[700px]' height='h-[80%]' delay='delay-0' display={hoveredImg} />
                 </div>
-                <Meme img='/uiux.webp' top='top-[calc(100%-100px)]' left='left-[calc(100%-100px)]' delay='delay-0' display={hoveredUi} />
-                <div className='!mix-blend-exclusion opacity-[0.9] '>
+                <div className='hidden tab:block'>
+
+                    <Meme img='/uiux.webp' top='top-[calc(100%-100px)]' left='left-[calc(100%-100px)]' delay='delay-0' display={hoveredUi} />
+                </div>
+                <div className='!mix-blend-exclusion opacity-[0.9]  hidden tab:block'>
 
                     <Meme img='/bkhalifa.webp' top='top-[300px]' left='left-[200px]' delay='delay-0' display={hoveredDubai} />
                 </div>
@@ -152,7 +158,7 @@ function Hero(props: Props) {
 
                     <Meme img='/falcon.gif' top='top-[300px]' left='left-[calc(100%-200px)]' delay='delay-[0.2s]' display={hoveredDubai} />
                 </div> */}
-                <div className=''>
+                <div className='hidden tab:block'>
 
                     <Meme img='/tea2.gif' top='top-[300px]' left='right-[200px]' delay='delay-[0.4s]' width='w-[150px]' display={hoveredDubai} />
                 </div>
