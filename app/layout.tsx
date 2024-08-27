@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="select-none">
-      <body className={major.className}>{children}</body>
+    <html lang="en" className="select-none w-[100vw] overflow-x-clip">
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

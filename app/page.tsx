@@ -7,10 +7,19 @@ import ProjectCard from "@components/projectCard/ProjectCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import BG from "@components/BG/BG";
 import Hero from "@components/Hero/Hero";
 import Projects from "@components/Projects";
+import Services from "./components/Services";
+import CustomCursor from "./components/CustomeCursur";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+import ImageReveal from "./components/ImageReveal";
+import Terminal from "./components/Terminal";
+import Heading from "./components/Heading";
+import Preload from "./components/preload";
+import Fun from "./components/Fun";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -146,27 +155,40 @@ export default function Home() {
 
   }, []);
 
+  const [isPressed, setIsPressed] = useState(false)
+
   useLenis();
   return (
     <>
-      <div className="bg-[#ffe5ff]">
-
-        <div className="w-full h-max relative">
+      <div className="bg-primary  main w-[100vw] overflow-x-clip" onMouseDown={() => setIsPressed(true)} onMouseUp={() => setIsPressed(false)}>
+        <Preload />
+        <CustomCursor />
+        <div className="w-full h-[100vh] relative">
 
           <Header />
           <Hero />
-          <Projects />
         </div>
-        <div className="w-full h-max relative mt-[400px] overflow-hidden">
-          <div className="font-[josef] font-bold text-center text-[200px]">About Me</div>
+        <Projects />
+        <div className="w-full h-max relative mt-[400px] lap:mt-[400px] " id="about">
+          <Heading text='ABOUT ME' />
           <Meme />
         </div>
+        <Services />
+        {/* <div className="w-[100vw] h-[700px] relative">
 
-        <div className="w-full h-[100vh] bg-[#ffe5ff]">
+          <ImageReveal  />
+        </div> */}
+        <div className="mt-[250px] relative z-[99]">
 
+          <Fun />
         </div>
+        <div className="relative z-[99] mt-[200px]">
 
+          <Footer ispressed={isPressed} />
+        </div>
+        <Terminal />
       </div>
+      {/* <div className="w-full h-[100vh] bg-primary"></div> */}
       <BG />
     </>
   );

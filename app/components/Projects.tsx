@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import Tv from './Tv'
+import Heading from './Heading'
 
 interface Props { }
 
@@ -9,15 +10,19 @@ function Projects(props: Props) {
 
     return (
         <>
-            <div className='mt-[20px] w-full relative h-max'>
-                <div className='flex gap-[20px] justify-center items-center font-[rubik]'>
-                    <div className='text-center text-[20px]'>
+            <div className='mt-[0px] w-full relative h-max z-[2]' id="projects">
+                <div className='flex gap-[20px] justify-center items-center font-headings'>
+                    <div className='hidden tab:block text-center text-[16px] tab:text-[20px] text-secondary'>
                         Some <br /> Featured
                     </div>
-                    <div className=' text-[200px] font-bold '>
+                    {/* <div className='heading_font_size font-normal text-secondary '>
                         PROJECTS
+                    </div> */}
+                    <div className='w-fit'>
+
+                        <Heading text='PROJECTS' />
                     </div>
-                    <div className='text-center text-[20px]'>
+                    <div className='hidden tab:block text-center text-[16px] tab:text-[20px] text-secondary'>
                         Web Engineering <br />
                         & UI/UX
                     </div>

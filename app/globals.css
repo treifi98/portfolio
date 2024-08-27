@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* create variable cooler of the value 4b94bc */
+ :root {
+  --cooler: #fff;
+} 
+
+body {
+  background-color: #e0e0e0;
+}
+
+.heading_font_size {
+  font-size: clamp(48px, 30px + 6vw, 200px) !important;
+}
+/* .heading_font_size {
+  font-size: clamp(48px, 30px + 6vw, 200px) !important;
+} */
+
+.strokec {
+  -webkit-text-stroke: 2px var(--cooler); /* Width of the stroke and the color */
+  /* color: var(--cooler);  */
+}
+.stroked {
+  -webkit-text-stroke: 2px var(--cooler); /* Width of the stroke and the color */
+  /* color: var(--cooler);  */
+}
+
+.bb{
+  border-image: url('/tv.png') 30 / 19px round;
+}
+
+.customc {
+  opacity: 0;
+}
+*:hover > .customc{
+  opacity: 1;
+}
+
+
+.circtext span{
+  position: absolute;
+  left:50%;
+  top: -2vw;
+  transform-origin: 0 22vw;
+}
+
 @font-face {
   font-family: "roboto";
   src: url("/fonts/Roboto-Regular.ttf") format("truetype");
@@ -95,4 +139,29 @@
   src: url("/fonts/JosefinSlab-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+}
+@font-face {
+  font-family: "mursgothic";
+  src: url("/fonts/mursgothic-widedark.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Revolin";
+  src: url("/fonts/Revolin-Thin.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Revolin";
+  src: url("/fonts/Revolin-ThinItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+#wall {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 9%,
+    transparent 9%
+  );
 }

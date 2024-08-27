@@ -48,7 +48,7 @@ function Meme(props: Props) {
 
     return (
         <>
-            <div className={`fixed ${props.width ?? 'w-[200px]'} ${props.height ?? 'h-[200px]'} ${props.top ?? 'top-0'} ${props.left ?? 'left-0'} ${props.delay ?? 'delay-0'} opacity-0 transition-all duration-[0.3s] translate-x-[-50%] translate-y-[-50%] overflow-hidden`} ref={meme}>
+            <div className={`fixed ${props.width ?? 'w-[200px]'} ${props.height ?? 'h-[200px]'} ${props.top ?? 'top-0'} ${props.left ?? 'left-0'} ${props.delay ?? 'delay-0'} opacity-0 transition-all duration-[0.3s] translate-x-[-50%] translate-y-[-50%] overflow-hidden z-[0]`} ref={meme}>
                 <div className='w-full h-full relative'>
                     <Image
                         src={props.img}
