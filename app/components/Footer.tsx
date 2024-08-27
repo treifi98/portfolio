@@ -79,7 +79,7 @@ function Footer(props: Props) {
 
                                 <Social img='/insta2.svg' text='@treifi98' />
                             </a>
-                            <a href='/Abdullatif-Resume.pdf' target='_blank' className='w-[20px] lap:w-[30px] h-max'>
+                            <a href='/resume.pdf' target='_blank' className='w-[20px] lap:w-[30px] h-max'>
 
                                 <Social img='/cv.svg' text='View Resume' />
                             </a>

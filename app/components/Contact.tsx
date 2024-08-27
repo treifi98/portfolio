@@ -197,7 +197,7 @@ function Contact(props: Props) {
                             </div>
                             <div className='w-fit flex justify-center items-center gap-[5px] place-self-start lap:place-self-end'>
                                 <img src="/cv.svg" alt="" className='w-[27px]' />
-                                <a href='/Abdullatif-Resume.pdf' target='_blank' className='text-secondary text-[18px] lap:text-[20px]'>View My Resume</a>
+                                <a href='/resume.pdf' target='_blank' className='text-secondary text-[18px] lap:text-[20px]'>View My Resume</a>
                             </div>
                             <div className='flex flex-col items-start place-self-start'>
                                 <div className='flex w-fit justify-start items-center gap-[5px]'>
@@ -227,7 +227,7 @@ function Contact(props: Props) {
 
                                 <img src="/insta2.svg" alt="" className='w-[25px]' />
                             </a>
-                            <a href="/Abdullatif-Resume.pdf">
+                            <a href="/resume.pdf">
 
                                 <img src="/cv.svg" alt="" className='w-[27px]' />
                             </a>
