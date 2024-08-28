@@ -42,7 +42,7 @@ function Footer(props: Props) {
                     <div className='lap:text-[24px] text-[20px] lap:mb-[10px] text-center lap:text-left'>
                         <span>
 
-                            Got a website idea brewing? Shoot me a message! <br />
+                            Got a project idea brewing? Shoot me a message! <br />
                         </span>
                         <span className='flex justify-start gap-[0px] lap:gap-[5px] items-center lap:items-center '>
 
