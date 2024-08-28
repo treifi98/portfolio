@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Major_Mono_Display, Rubik_Mono_One, Titillium_Web } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 const Titillium  = Titillium_Web({ subsets:['latin'], weight: ['400', '600'] });
@@ -20,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="select-none w-[100vw] overflow-x-clip">
+      <head>
+        <title>Portfolio</title>
+      </head>
       <body className={roboto.className}>{children}</body>
     </html>
   );
