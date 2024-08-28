@@ -169,7 +169,7 @@ export default function Home() {
           <Hero />
         </div>
         <Projects />
-        <div className="w-full h-max relative mt-[400px] lap:mt-[400px] " id="about">
+        <div className="w-full h-max relative mt-[420px] lap:mt-[400px] " id="about">
           <Heading text='ABOUT ME' />
           <Meme />
         </div>

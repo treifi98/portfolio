@@ -62,7 +62,7 @@ function Hero(props: Props) {
                 <div className='w-[100vw] h-full fixed z-[1] top-0 left-0'></div>
 
                 <div className=' relative h-[calc(100vh-150px)] tab:h-[calc(100vh-200px)] w-full flex justify-center items-center font-body z-[9] '>
-                    <div className='text-[40px] tab:text-[60px] w-[80%] amer:w-[40%] max-w-[786px] mx-auto text-center font-normal mt-[-100px]'>
+                    <div className='text-[35px] tab:text-[60px] w-[80%] amer:w-[40%] max-w-[786px] mx-auto text-center font-normal mt-[-100px]'>
                         <span className='font-headings font-normal text-secondary hword'>Hi</span>
                         <span className='hword'>
                             ,
@@ -94,7 +94,7 @@ function Hero(props: Props) {
                         </span>
                         <span className='relative w-max' onMouseOver={() => setHoveredUi(true)} onMouseLeave={() => setHoveredUi(false)}>
                             <span className='hword'>
-                                <span className=' whitespace-nowrap'>
+                                <span className=' whitespace-nowrap hidden tab:inline-block'>
 
                                     UI/UX
                                 </span>
@@ -102,8 +102,12 @@ function Hero(props: Props) {
                                 &nbsp;
                                 <span className='w-full h-[1px] bg-[#000] bottom-[5px] absolute left-0'></span>
                             </span>
-                            <span className='hword relative inline-block'>
 
+                            <span className='hword relative inline-block'>
+                                <span className=' whitespace-nowrap inline-block tab:hidden'>
+
+                                    UI/UX &nbsp;
+                                </span>
                                 Designer&nbsp;
                                 <span className='w-full h-[1px] bg-[#000] bottom-[5px] absolute left-0'></span>
                             </span>

@@ -1,39 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Contact from './Contact'
-import LogoFooter from './LogoFooter'
-import TechCircle from './TechCircle'
-import Fun from './Fun'
 import Social from './Social'
+import { useClipboard } from '../hooks/useClipboard'
 
 interface Props {
     ispressed: boolean
 }
+
 function Footer(props: Props) {
-    const { } = props
-    const [conatct, setContact] = React.useState(0)
+    const [contact, setContact] = useState(0)
+    const { canCopy, copyToClipboard } = useClipboard();
+
     const handleContact = () => {
         setContact((prev) => (prev + 1))
     }
-    function copyToClipboard(text: string) {
-        navigator.clipboard.writeText(text).then(() => {
-            console.log(' copied to clipboard');
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    }
 
-    const handle_click = (text: string,id:string) => {
-        copyToClipboard(text);
-        const phoneElement = document.querySelector(`#${id} .tt`) as HTMLElement | null;
-        if (phoneElement) {
-            phoneElement.innerText = 'Copied!';
+    const handle_click = (text: string, id: string) => {
+        if (canCopy) {
+            copyToClipboard(text);
+            const element = document.querySelector(`#${id} .tt`) as HTMLElement | null;
+            if (element) {
+                element.innerText = 'Copied!';
+            }
         }
     }
 
-    const reset = (text: string,id:string) => {
-        const phoneElement = document.querySelector(`#${id} .tt`) as HTMLElement | null;
-        if (phoneElement) {
-            phoneElement.innerText = text;
+    const reset = (text: string, id: string) => {
+        const element = document.querySelector(`#${id} .tt`) as HTMLElement | null;
+        if (element) {
+            element.innerText = text;
         }
     }
 
@@ -67,12 +62,10 @@ function Footer(props: Props) {
 
                                 <Social img='/linkedin.svg' text='LinkedIn' />
                             </a>
-                            <div className='w-[26px] lap:w-[33px] h-max ' id='mail' onClick={() => handle_click('Hello@abdullatiftreifi.com','mail')} onMouseLeave={() => reset('Hello@abdullatiftreifi.com','mail')}>
-
+                            <div className='w-[26px] lap:w-[33px] h-max ' id='mail' onClick={() => handle_click('Hello@abdullatiftreifi.com', 'mail')} onMouseLeave={() => reset('Hello@abdullatiftreifi.com', 'mail')}>
                                 <Social img='/mail1.svg' text='Hello@abdullatiftreifi.com' mail={true} />
                             </div>
-                            <div className='w-[20px] lap:w-[30px] h-max' id='phone' onClick={() => handle_click('+971501579362','phone')} onMouseLeave={() => reset('+971501579362','phone')}>
-
+                            <div className='w-[20px] lap:w-[30px] h-max' id='phone' onClick={() => handle_click('+971501579362', 'phone')} onMouseLeave={() => reset('+971501579362', 'phone')}>
                                 <Social img='/phone.svg' text='+971501579362' />
                             </div>
                             <a href='https://www.instagram.com/treifi98/' target='_blank' className='w-[20px] lap:w-[32px] h-max'>
@@ -94,7 +87,7 @@ function Footer(props: Props) {
             </div>
             <div className='relative z-[99]'>
 
-                <Contact status={conatct} />
+                <Contact status={contact} />
             </div>
 
 

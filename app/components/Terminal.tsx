@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Terminal as TerminalIcon } from 'lucide-react';
 
 const Terminal: React.FC = () => {
@@ -236,6 +236,13 @@ Technologies:
         document.body.style.transform = 'rotate(-2deg)';
     };
 
+    const handleScroll = useCallback((e: React.WheelEvent<HTMLDivElement>) => {
+        if (terminalRef.current) {
+            e.stopPropagation();
+            terminalRef.current.scrollTop += e.deltaY;
+        }
+    }, []);
+
     const handleTerminalClick = (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
         if (!(e.target as HTMLElement).closest('button') && inputRef.current) {
@@ -258,8 +265,9 @@ Technologies:
         >
             <div
                 ref={terminalRef}
-                className="bg-gray-900 text-green-400 p-4 rounded-lg w-full max-w-4xl h-96 flex flex-col"
+                className="bg-gray-900 text-green-400 p-4 rounded-lg w-full max-w-4xl h-96 flex flex-col overflow-y-auto"
                 onClick={handleTerminalClick}
+                onWheel={handleScroll}
             >
                 <div className="flex justify-between items-center mb-2">
                     <TerminalIcon size={24} />
@@ -291,6 +299,7 @@ Technologies:
             </div>
         </div>
     );
+
 };
 
 export default Terminal;

@@ -11,8 +11,11 @@ function Menue(props: Props) {
     const [clicked, setClicked] = React.useState(false)
     const [index, setIndex] = React.useState(0)
     const images = [
-        '/str1.png',
-        'str.png'
+        // '/wall1.webp',
+        // 'wall2.webp',
+        'wall3.webp',
+        'wall4.webp',
+        'wall6.webp'
     ]
 
     useEffect(() => {
@@ -54,10 +57,12 @@ function Menue(props: Props) {
 
     const handleOpen = () => {
         menu.current?.classList.add('!h-[10px]')
+        menu.current?.querySelectorAll('div')?.forEach((element)=>{element.classList.add('!bg-primary')})
         wall.current?.classList.add('!top-0',)
     }
     const handleClose = () => {
         menu.current?.classList.remove('!h-[10px]')
+        menu.current?.querySelectorAll('div')?.forEach((element)=>{element.classList.remove('!bg-primary')})
         wall.current?.classList.remove('!top-0')
         setTimeout(() => {
 
@@ -97,8 +102,8 @@ function Menue(props: Props) {
     return (
         <>
             <div className='w-[80px] tab:w-[100px] flex flex-col justify-between items-center h-[20px] transition-all duration-[0.3s] z-[99999]' onClick={() => setOpen((prev) => !prev)} ref={menu}>
-                <div className='w-full h-[5px] bg-[#000]'></div>
-                <div className='w-full h-[5px] bg-[#000]'></div>
+                <div className='w-full h-[5px] bg-[#000] transition-all duration-[0.3s]'></div>
+                <div className='w-full h-[5px] bg-[#000] transition-all duration-[0.3s]'></div>
             </div>
 
             <div className='w-[100vw] h-[100vh] fixed top-[-100vh] left-0 z-[9999] bg-accesnt transition-all duration-[0.8s] ' ref={wall} >
