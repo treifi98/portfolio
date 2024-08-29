@@ -206,7 +206,7 @@ function Contact(props: Props) {
                                 </div>
                                 <div className='flex w-fit justify-start items-center gap-[5px] mt-[5px]'>
                                     <img src="/email.svg" alt="" className='w-[35px]' />
-                                    <a href='Hello@abdullatiftreifi.com' target='_blank' className='text-secondary text-[18px] lap:text-[20px]'>Hello@abdullatiftreifi.com</a>
+                                    <a href='Abdullatif.treifi@gmail.com' target='_blank' className='text-secondary text-[18px] lap:text-[20px]'>Abdullatif.treifi@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +215,7 @@ function Contact(props: Props) {
 
                                 <img src="/linkedin.svg" alt="" className='w-[25px]' />
                             </a>
-                            <a href="mailto: Hello@abdullatiftreifi.com" >
+                            <a href="mailto: Abdullatif.treifi@gmail.com" >
 
                                 <img src="/mail1.svg" alt="" className='w-[28px] opacity-[0.8] relative  block' />
                             </a>

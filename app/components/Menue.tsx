@@ -57,13 +57,15 @@ function Menue(props: Props) {
 
     const handleOpen = () => {
         menu.current?.classList.add('!h-[10px]')
-        menu.current?.querySelectorAll('div')?.forEach((element)=>{element.classList.add('!bg-primary')})
+        menu.current?.querySelectorAll('div')?.forEach((element) => { element.classList.add('!bg-primary') })
         wall.current?.classList.add('!top-0',)
+        wall.current?.classList.remove('opacity-0')
     }
     const handleClose = () => {
         menu.current?.classList.remove('!h-[10px]')
-        menu.current?.querySelectorAll('div')?.forEach((element)=>{element.classList.remove('!bg-primary')})
+        menu.current?.querySelectorAll('div')?.forEach((element) => { element.classList.remove('!bg-primary') })
         wall.current?.classList.remove('!top-0')
+        wall.current?.classList.add('opacity-0')
         setTimeout(() => {
 
             handleImgIndex()
@@ -106,7 +108,7 @@ function Menue(props: Props) {
                 <div className='w-full h-[5px] bg-[#000] transition-all duration-[0.3s]'></div>
             </div>
 
-            <div className='w-[100vw] h-[100vh] fixed top-[-100vh] left-0 z-[9999] bg-accesnt transition-all duration-[0.8s] ' ref={wall} >
+            <div className='w-[100vw] h-[100vh] fixed top-[-100vh] left-0 z-[9999] bg-accesnt transition-all duration-[0.8s] opacity-0' ref={wall} >
                 <nav className='w-full h-full flex justify-center items-center relative gap-[30px]' >
                     <div id='wallbg' className={`w-[100vw] h-[100vh] absolute top-0 left-0 mix-blend-multiply transition-all duration-[0.8s] bg-[50%_40%] tab:bg-[length:110vmax] bg-no-repeat bg-cover`} ref={wallBg} style={{ backgroundImage: `url(${images[index]})` }}></div>
                     <div id='wall' className='w-[100vw] h-[100vh] absolute top-0 left-0 bg-[length:12vmin_12vmin] translate-all duration-[0.8s]' ref={wallDots}></div>

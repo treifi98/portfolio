@@ -62,8 +62,8 @@ function Footer(props: Props) {
 
                                 <Social img='/linkedin.svg' text='LinkedIn' />
                             </a>
-                            <div className='w-[26px] lap:w-[33px] h-max ' id='mail' onClick={() => handle_click('Hello@abdullatiftreifi.com', 'mail')} onMouseLeave={() => reset('Hello@abdullatiftreifi.com', 'mail')}>
-                                <Social img='/mail1.svg' text='Hello@abdullatiftreifi.com' mail={true} />
+                            <div className='w-[26px] lap:w-[33px] h-max ' id='mail' onClick={() => handle_click('Abdullatif.treifi@gmail.com', 'mail')} onMouseLeave={() => reset('Abdullatif.treifi@gmail.com', 'mail')}>
+                                <Social img='/mail1.svg' text='Abdullatif.treifi@gmail.com' mail={true} />
                             </div>
                             <div className='w-[20px] lap:w-[30px] h-max' id='phone' onClick={() => handle_click('+971501579362', 'phone')} onMouseLeave={() => reset('+971501579362', 'phone')}>
                                 <Social img='/phone.svg' text='+971501579362' />

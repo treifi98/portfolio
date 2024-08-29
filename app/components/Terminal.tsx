@@ -97,11 +97,8 @@ Available commands:
 - list skills: Display a list of my technical skills
 - list projects: Show a list of my notable projects
 - show contact info: Display my contact information
-- send message: Open a form to send me a message
-- about: Learn more about me and my background
 - hack nasa: Attempt to hack NASA (just for fun!)
 - do a barrel roll: Spin the page!
-- askew: Tilt the page slightly
 - exit or quit: Close the terminal
                 `;
                 break;
@@ -135,19 +132,30 @@ Technologies:
 - Git
 - GitHub
 - Docker
+
+Graphic Design:
+- Figma
+- Adobe Illustrator
+- Adobe Photoshop
                 `;
                 break;
             case 'list projects':
                 response = `
-┌─────────┬───────────────────────────────────────┬──────────────────────────────────────────────────────────────────┬────────────────────┐
-│ Title   │ Tech Stack                            │ Description                                                      │ Visit               │
-├─────────┼───────────────────────────────────────┼──────────────────────────────────────────────────────────────────┼────────────────────┤
-│ LSC     │ NextJS, TypeScript, GSAP,             │ Website for interior design / constructions company              │ https://lsc-uae.com│
-│         │ TailwindCSS, Prisma, AWS              │ (heavy in animations)                                            │                    │
-├─────────┼───────────────────────────────────────┼──────────────────────────────────────────────────────────────────┼────────────────────┤
-│LuxRenov │ NextJS, TypeScript, GSAP,             │ Website for home renovation company (heavy in animations)        │https://luxrenov.com│
-│         │ TailwindCSS, AWS                      │                                                                  │                    │
-└─────────┴───────────────────────────────────────┴──────────────────────────────────────────────────────────────────┴────────────────────┘
+┌───────────┬───────────────────────────────────────┬──────────────────────────────────────────────────────────────────┬───────────────────────┐
+│ Title     │ Tech Stack                            │ Description                                                      │ Visit                 │
+├───────────┼───────────────────────────────────────┼──────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ LSC       │ NextJS, TypeScript, GSAP,             │ Website for interior design / constructions company              │ https://lsc-uae.com   │
+│           │ TailwindCSS, Prisma, AWS              │ (heavy in animations)                                            │                       │
+├───────────┼───────────────────────────────────────┼──────────────────────────────────────────────────────────────────┼───────────────────────┤
+│LuxRenov   │ NextJS, TypeScript, GSAP,             │ Website for home renovation company (heavy in animations)        │https://luxrenov.com   │
+│           │ TailwindCSS, AWS                      │                                                                  │                       │
+├───────────┼───────────────────────────────────────┼──────────────────────────────────────────────────────────────────┼───────────────────────┤
+|STONESTOX  │ PHP, Laravel, MySQL, AlpineJS         │ The site is an e-commerce platform with an integrated            │https://stonestox.com  │
+│           │ TailwindCSS, AWS                      │  inquiry system for seamless customer interaction.               │                       │
+├───────────┼───────────────────────────────────────┼──────────────────────────────────────────────────────────────────┼───────────────────────┤
+|yalayisboat| PHP, Laravel, AlpineJS                │ The site is an e-commerce platform with an integrated            │https://yalayisboat.com│
+│           │ TailwindCSS, AWS                      │  inquiry system for seamless customer interaction.               │                       │
+└───────────┴───────────────────────────────────────┴──────────────────────────────────────────────────────────────────┴───────────────────────┘
                 `;
                 break;
             case 'show contact info':
@@ -155,7 +163,7 @@ Technologies:
 ┌───────────┬──────────────────────────────────────────────────┐
 │ Contact   │ Information                                      │
 ├───────────┼──────────────────────────────────────────────────┤
-│ Email     │ hello@abdullatiftreifi.com                       │
+│ Email     │ abdullatif.treifi@gmail.com                      │
 │ Phone     │ +971501579362                                    │
 │ LinkedIn  │ https://linkedin.com/in/abdullatif-treifi/       │
 │ Instagram │ @treifi98                                        │
@@ -265,7 +273,7 @@ Technologies:
         >
             <div
                 ref={terminalRef}
-                className="bg-gray-900 text-green-400 p-4 rounded-lg w-full max-w-4xl h-96 flex flex-col overflow-y-auto"
+                className="bg-gray-900 text-green-400 p-4 rounded-lg w-full max-w-[1200px] h-96 flex flex-col overflow-y-auto"
                 onClick={handleTerminalClick}
                 onWheel={handleScroll}
             >
