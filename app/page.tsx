@@ -23,45 +23,14 @@ import Fun from "./components/Fun";
 gsap.registerPlugin(ScrollTrigger);
 
 
-const projects = [
-  {
-    title: 'proj1',
-    desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora alias facilis incidunt, atque, harum fugiat tenetur rem voluptate blanditiis, quis eveniet minima libero iste corporis quod sunt sed expedita.',
-    img: '/proj1.jpg',
-    id: '1'
-  },
-  {
-    title: 'proj2',
-    desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora alias facilis incidunt, atque, harum fugiat tenetur rem voluptate blanditiis, quis eveniet minima libero iste corporis quod sunt sed expedita.',
-    img: '/proj2.jpg',
-    id: '2'
-  },
-  {
-    title: 'proj3',
-    desc: 'desc3',
-    img: '/proj3.jpg',
-    id: '3'
-  },
-  {
-    title: 'proj4',
-    desc: 'desc4',
-    img: '/proj4.jpg',
-    id: '4'
-  }
-]
 
 export default function Home() {
 
 
   const tl1 = useRef(gsap.timeline())
-  // const clientsec = useRef(null)
 
   useGSAP(() => {
-    // const isMobile = window.innerWidth <= 768; // You can adjust the breakpoint as needed
-    // const staggerValue = isMobile ? 0.5 : 0.1; // Increase the stagger value for mobile screens
-    // const moveValue = isMobile ? -80 : -200; // Increase the stagger value for mobile screens
-    // Select all sections within the container
-    // const sections = gsap.utils.toArray(".section");
+
 
     tl1.current.to('.projectcard', {
       scale: 1,
@@ -95,61 +64,6 @@ export default function Home() {
       },
       stagger: 0.7
     })
-
-    // Create ScrollTrigger for each section
-    // sections.forEach((section, index) => {
-    //     ScrollTrigger.create({
-    //         trigger: section as gsap.DOMTarget,
-    //         start: "top top",
-    //         end: "+=100%",
-    //         pin: true,
-    //         pinSpacing: false,
-    //         scrub: true,
-
-    //         // markers: false,
-    //         // snap: 1,
-    //     });
-    // });
-    // tl1.current
-    //   .fromTo('.reveal',
-    //     { opacity: 0.8 },
-    //     {
-    //       opacity: 0,
-    //       scrollTrigger: {
-    //         start: 'top top',
-    //         end: 'center top',
-    //         scrub: true,
-    //         trigger: '.aboutint3',
-    //         // markers: true,
-    //         pin: 'reveal',
-    //         pinSpacing: false
-    //       }
-    //     }
-    //   )
-
-    // projects.forEach((project, index) => {
-    //   tl1.current
-    //     .to(`.proj${project.id}`,
-    //       {
-    //         scale: 1,
-    //         y: '0',
-    //         top: '0',
-    //         scrollTrigger: {
-    //           start: `${index*200}px bottom`,
-    //           end: `bottom top`,
-    //           scrub: true,
-    //           trigger: `.proj${project.id}`,
-    //           markers: true,
-    //           pin: '.xcx',
-    //           // pinSpacing: false
-    //           // pinnedContainer: ".cont"
-
-    //         }
-    //       }
-    //     )
-
-    // })
-
 
 
 
@@ -188,7 +102,6 @@ export default function Home() {
         </div>
         <Terminal />
       </div>
-      {/* <div className="w-full h-[100vh] bg-primary"></div> */}
       <BG />
     </>
   );

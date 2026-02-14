@@ -1,3 +1,4 @@
+'use client'
 // components/LottieAnimation.tsx
 import React from 'react';
 import Lottie, { LottieComponentProps } from 'lottie-react';

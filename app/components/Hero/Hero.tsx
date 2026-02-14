@@ -1,18 +1,21 @@
 'use client'
-import Image from 'next/image'
 import React, { useRef } from 'react'
 import Meme from '@components/Meme'
-import Video from '@components/Video'
+// import Video from '@components/Video'
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import LottieAnimation from '../LottieAnimation'
+// import LottieAnimation from '../LottieAnimation'
 import scroll from '@assets/scroll.json'; // Adjust the path to your animation JSON file
+import dynamic from 'next/dynamic'
 
+const LottieAnimation = dynamic(
+    () => import('../LottieAnimation'),
+    { ssr: false }
+)
 gsap.registerPlugin(ScrollTrigger);
-interface Props { }
 
-function Hero(props: Props) {
+function Hero() {
     const [hoveredSe, setHoveredSe] = React.useState(false)
     const [hoveredSc, setHoveredSc] = React.useState(false)
     const [hoveredImg, setHoveredImg] = React.useState(false)
@@ -21,31 +24,7 @@ function Hero(props: Props) {
 
     const tl1 = useRef(gsap.timeline())
     useGSAP(() => {
-        // tl1.current
-        //     .to('.vid2', {
-        //         rotate: '-80deg',
-        //         y: '-50vw',
-        //         x: '-100vw',
-        //         scrollTrigger: {
-        //             start: 'top top',
-        //             end: 'bottom top',
-        //             scrub: 2,
-        //             trigger: '.hero',
-        //             // markers: true,
-        //         }
-        //     })
-        //     .to('.vid1', {
-        //         rotate: '80deg',
-        //         y: '-50vw',
-        //         x: '100vw',
-        //         scrollTrigger: {
-        //             start: 'top top',
-        //             end: 'bottom top',
-        //             scrub: 2,
-        //             trigger: '.hero',
-        //             // markers: true,
-        //         }
-        //     })
+       
         tl1.current
             .from('.hword', {
                 opacity: 0,

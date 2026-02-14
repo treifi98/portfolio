@@ -107,7 +107,8 @@ const Tv: React.FC = () => {
                     </div>
                 ))}
                 <div className='w-full lap:w-[calc(45vw+40%)] aspect-[1.4/1] lap:aspect-[1.8/1]  absolute top-[-15%] lap:left-[-7%]'>
-                    <Image src="/tv.png" alt="" layout='fill' />
+                    {/* <Image src="/tv.png" alt="" layout='fill' /> */}
+                    <img src="/tv.png" alt="" className='w-full h-full object-cover' />
                     <div className='relative top-0 left-0 w-full h-full'>
                         {[
                             { text: 'Next -&gt;', onClick: handleNext, mobileText: '-&gt;' },
